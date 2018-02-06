@@ -83,7 +83,7 @@ std::vector<std::vector<size_t>> splitIndices(size_t max_index,
   }
   if (total_set_size > max_index + 1) {
     std::ostringstream oss;
-    oss << "rosban_utils::splitIndices: available_indices (" << (max_index+1)
+    oss << "rhoban_utils::splitIndices: available_indices (" << (max_index+1)
         << ") is smaller than total set size (" << total_set_size << ")";
     throw std::logic_error(oss.str());
   }
