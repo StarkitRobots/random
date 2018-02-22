@@ -77,7 +77,8 @@ MultivariateGaussian::MultivariateGaussian(const Eigen::VectorXd& mean,
   }
   if (isCircular.size() != 0 &&
       isCircular.size() != mean.size()) {
-    throw std::logic_error("MultivariateGaussian invalid circular size");
+    throw std::logic_error("MultivariateGaussian invalid circular size: "
+                           + std::to_string(isCircular.size()));
   }
 
   //Circular initialization
@@ -191,16 +192,17 @@ void MultivariateGaussian::fit(const std::vector<Eigen::VectorXd>& data,
 {
   //Check sizes
   if (data.size() < 2) {
-    throw std::logic_error("MultivariateGaussian not enough data points");
+    throw std::logic_error("MultivariateGaussian::fit: not enough data points");
   }
   size_t size = data.front().size();
   for (size_t i=0;i<data.size();i++) {
     if ((size_t)data[i].size() != size) {
-      throw std::logic_error("MultivariateGaussian invalid data dimension");
+      throw std::logic_error("MultivariateGaussian::fit: invalid data dimension");
     }
   }
   if (isCircular.size() != 0 && (size_t)isCircular.size() != size) {
-    throw std::logic_error("MultivariateGaussian invalid circular dimension");
+    throw std::logic_error("MultivariateGaussian::fit: invalid circular dimension "
+                           + std::to_string(isCircular.size()));
   } 
     
   //Circular initialization
