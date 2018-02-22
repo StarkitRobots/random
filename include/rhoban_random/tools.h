@@ -23,6 +23,10 @@ std::vector<std::default_random_engine> getRandomEngines(int nb_engines,
 std::vector<size_t> getKDistinctFromN(size_t k, size_t n,
                                       std::default_random_engine * engine = NULL);
 
+/// Similar to getKDistinctFromN, but if k >= n, then returns {0,1,...,n-1}
+std::vector<size_t> getUpToKDistinctFromN(size_t k, size_t n,
+                                          std::default_random_engine * engine = NULL);
+
 /// Split the set {0, 1, ..., max_index} into multiple sets of the given size
 /// throws a logic_error if sum(set_sizes) > max_index+1
 /// Create its own engine if no engine is provided

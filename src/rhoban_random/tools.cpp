@@ -39,7 +39,6 @@ std::vector<std::default_random_engine> getRandomEngines(int nb_engines,
   }
   return result;
 }
-
 std::vector<size_t> getKDistinctFromN(size_t k, size_t n,
                                       std::default_random_engine * engine)
 {
@@ -71,6 +70,19 @@ std::vector<size_t> getKDistinctFromN(size_t k, size_t n,
     delete(engine);
   }
   return chosenIndex;
+}
+
+std::vector<size_t> getUpToKDistinctFromN(size_t k, size_t n,
+                                          std::default_random_engine * engine)
+{
+  if (k >= n) {
+    std::vector<size_t> indices;
+    for (size_t idx = 0; idx < n; idx++) {
+      indices.push_back(idx);
+    }
+    return indices;
+  }
+  return getKDistinctFromN(k,n,engine);
 }
 
 std::vector<std::vector<size_t>> splitIndices(size_t max_index,
