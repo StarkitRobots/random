@@ -65,5 +65,4 @@ std::vector<int> sampleWeightedIndices(const std::vector<double> & weights,
 std::map<int,int> sampleWeightedIndicesMap(const std::vector<double> & weights,
                                            int nb_samples,
                                            std::default_random_engine * engine);
-
 }
