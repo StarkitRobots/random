@@ -19,6 +19,7 @@ std::default_random_engine * newRandomEngine();
 std::vector<std::default_random_engine> getRandomEngines(int nb_engines,
                                                          std::default_random_engine * engine = NULL);
 
+/// Return k distinct number chosen randomly from {0,1,...,n-1}
 /// Create its own engine if no engine is provided
 std::vector<size_t> getKDistinctFromN(size_t k, size_t n,
                                       std::default_random_engine * engine = NULL);
