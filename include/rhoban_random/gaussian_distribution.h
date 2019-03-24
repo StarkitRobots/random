@@ -1,8 +1,9 @@
 #pragma once
 
-namespace rhoban_random {
-
-class GaussianDistribution {
+namespace rhoban_random
+{
+class GaussianDistribution
+{
 public:
   GaussianDistribution(double mean, double var);
 
@@ -14,4 +15,4 @@ private:
   double var;
 };
 
-}
+}  // namespace rhoban_random
