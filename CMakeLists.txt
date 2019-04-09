@@ -4,7 +4,7 @@ project(rhoban_random)
 find_package(catkin REQUIRED COMPONENTS
   eigen)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
 
 catkin_package(
   INCLUDE_DIRS include
