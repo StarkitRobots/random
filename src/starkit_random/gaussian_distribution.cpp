@@ -1,8 +1,8 @@
-#include "rhoban_random/gaussian_distribution.h"
+#include "starkit_random/gaussian_distribution.h"
 
 #include <cmath>
 
-namespace rhoban_random
+namespace starkit_random
 {
 GaussianDistribution::GaussianDistribution(double mean_, double var_) : mean(mean_), var(var_)
 {
@@ -15,4 +15,4 @@ double GaussianDistribution::getLogLikelihood(double val) const
   return -0.5 * (std::log(2 * M_PI) + std::log(var) + diff2 / var);
 }
 
-}  // namespace rhoban_random
+}  // namespace starkit_random

@@ -1,9 +1,9 @@
-#include "rhoban_random/tools.h"
+#include "starkit_random/tools.h"
 
 #include <chrono>
 #include <stdexcept>
 
-namespace rhoban_random
+namespace starkit_random
 {
 std::default_random_engine getRandomEngine()
 {
@@ -100,7 +100,7 @@ std::vector<std::vector<size_t>> splitIndices(size_t max_index, const std::vecto
   if (total_set_size > max_index + 1)
   {
     std::ostringstream oss;
-    oss << "rhoban_utils::splitIndices: available_indices (" << (max_index + 1) << ") is smaller than total set size ("
+    oss << "starkit_utils::splitIndices: available_indices (" << (max_index + 1) << ") is smaller than total set size ("
         << total_set_size << ")";
     throw std::logic_error(oss.str());
   }
@@ -264,4 +264,4 @@ std::map<int, int> sampleWeightedIndicesMap(const std::vector<double>& weights, 
   return indices_occurences;
 }
 
-}  // namespace rhoban_random
+}  // namespace starkit_random

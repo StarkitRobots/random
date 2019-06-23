@@ -1,11 +1,11 @@
-#include "rhoban_random/multivariate_gaussian.h"
+#include "starkit_random/multivariate_gaussian.h"
 
 #include <Eigen/Dense>
 
 #include <cmath>
 #include <stdexcept>
 
-namespace rhoban_random
+namespace starkit_random
 {
 /// Return the angle corresponding in [-pi, pi]
 static double AngleBound(double angle)
@@ -359,4 +359,4 @@ Eigen::VectorXd MultivariateGaussian::computeDistanceFromMean(const Eigen::Vecto
   return delta;
 }
 
-}  // namespace rhoban_random
+}  // namespace starkit_random

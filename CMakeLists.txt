@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(rhoban_random)
+project(starkit_random)
 
 find_package(catkin REQUIRED COMPONENTS
   eigen)
@@ -8,7 +8,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
 
 catkin_package(
   INCLUDE_DIRS include
-  LIBRARIES rhoban_random
+  LIBRARIES starkit_random
   CATKIN_DEPENDS eigen
 )
 
@@ -18,7 +18,7 @@ include_directories(
   )
 
 set(DIRECTORIES
-  src/rhoban_random
+  src/starkit_random
   )
 
 # Build ALL_SOURCES
@@ -36,6 +36,6 @@ foreach (DIRECTORY ${DIRECTORIES})
     set (ALL_SOURCES ${ALL_SOURCES} ${PREFIXED_SOURCES})
 endforeach (DIRECTORY)
 
-add_library(rhoban_random
+add_library(starkit_random
   ${ALL_SOURCES}
 )

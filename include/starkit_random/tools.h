@@ -5,7 +5,7 @@
 #include <map>
 #include <random>
 
-namespace rhoban_random
+namespace starkit_random
 {
 std::default_random_engine getRandomEngine();
 std::default_random_engine* newRandomEngine();
@@ -53,4 +53,4 @@ std::vector<int> sampleWeightedIndices(const std::vector<double>& weights, int n
 /// cf sampleWeightedIndices
 std::map<int, int> sampleWeightedIndicesMap(const std::vector<double>& weights, int nb_samples,
                                             std::default_random_engine* engine);
-}  // namespace rhoban_random
+}  // namespace starkit_random

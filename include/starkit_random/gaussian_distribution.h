@@ -1,6 +1,6 @@
 #pragma once
 
-namespace rhoban_random
+namespace starkit_random
 {
 class GaussianDistribution
 {
@@ -15,4 +15,4 @@ private:
   double var;
 };
 
-}  // namespace rhoban_random
+}  // namespace starkit_random

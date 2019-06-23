@@ -6,7 +6,7 @@
 #include <random>
 #include <Eigen/Core>
 
-namespace rhoban_random
+namespace starkit_random
 {
 /// This class implement a Multivariate Gaussian distribution. It provides
 /// access to measures such as the density of probability at a given point
@@ -92,4 +92,4 @@ private:
   Eigen::VectorXd computeDistanceFromMean(const Eigen::VectorXd& point) const;
 };
 
-}  // namespace rhoban_random
+}  // namespace starkit_random

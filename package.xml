@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>rhoban_random</name>
+  <name>starkit_random</name>
   <version>0.0.0</version>
   <description>A package containing tools to generate random objects</description>
 
